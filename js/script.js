@@ -28,7 +28,35 @@ function visPlaylister(playlister) {
   // "forEach" looper igennem hvert objekt ("playliste") i arrayet én af gangen.
   playlister.forEach((playlist) => {
 
-   
+    // "createElement()" opretter et nyt tomt <div> element i hukommelsen. Det er ikke synligt på siden endnu — det tilføjer man til sidst.
+    const kort = document.createElement("div");
+
+    // "classList.add()" giver vores nye div en CSS class. Så man kan style alle playlist-kort ens i CSS.
+    kort.classList.add("playlist-kort");
+
+    // "innerHTML" bestemmer hvad der skal stå inde i vores div.
+    // Man bruger backticks (`) i stedet for "citationstegn" fordi backticks tillader at skrive HTML over flere linjer
+    // og indsætte variabler direkte med ${}.
+    // playlist.emoji, playlist.navn osv. henter værdier fra JSON objektet.
+    kort.innerHTML = `
+      <span class="playlist-emoji">${playlist.emoji}</span>
+      <h3>${playlist.navn}</h3>
+      <p>${playlist.stemning}</p>
+      <button class="playlist-knap">Åbn playlist</button>
+    `;
+
+    // "addEventListener()" lytter efter om brugeren klikker på playlist kortet.
+    // Når det sker, kører koden inde i () — det kaldes en arrow function.
+    kort.addEventListener("click", () => {
+
+      // "window.open()" åbner playlist linket i browseren.
+      // "playlist.link" henter linket fra JSON objektet.
+      // "_blank" betyder at linket åbner i en ny fane.
+      window.open(playlist.link, "_blank");
+    });
+
+    // "appendChild()" tilføjer det færdige kort til containeren i HTML.
+    // Og nu bliver kortet synligt på landingpage. Det sker for hver playliste i arrayet én ad gangen.
+    container.appendChild(kort);
   });
 }
-
