@@ -14,10 +14,30 @@
     },
 
     {
-    "navn": "", 
-    "stemning": "",
-    "emoji": "",
-    "link": ""
+    "navn": "With the girls", 
+    "stemning": "Let our favorite power women set the mood",
+    "emoji": "💋",
+    "link": "https://open.spotify.com/playlist/73t8g2D4S2Yq0zoPFZEjIe?si=3RG8qXDrREyo9BmrrcAlQA"
     },
 
+    {
+    "navn": "Cheers for the tears", 
+    "stemning": "Cry your heart out to breakup anthems",
+    "emoji": "🖤",
+    "link": "https://open.spotify.com/playlist/7G6McCbYxqL3olW39PLo9C?si=hrZugXhlTX684vI19F3K1A"
+    },
+
+    {
+    "navn": "Dancing queen", 
+    "stemning": "Dance the night away to these iconic songs",
+    "emoji": "🪩",
+    "link": "https://open.spotify.com/playlist/34t2fESoWTJm2UPaSvQb8F?si=SMhkj6_NTB2b_RqUe2dMVQ"
+    },
+
+    {
+    "navn": "Slow down", 
+    "stemning": "Lovely tunes that steady your heartbeat",
+    "emoji": "🕯️",
+    "link": "https://open.spotify.com/playlist/6DXBX5e3KSmNNYY8YpGNrD?si=z4Qz6A3QRhG4PqZx6jh08g"
+    },
 ]
