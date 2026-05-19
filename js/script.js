@@ -1,17 +1,14 @@
-const speaker = document.querySelector(".speaker");
-const container = document.querySelector(".notes-container");
+// ----------------------------------------
+// FETCH PLAYLISTER FRA JSON FIL
+// ----------------------------------------
 
-speaker.addEventListener("mousemove", (e) => {
-  const note = document.createElement("div");
-  note.classList.add("note");
-  note.innerHTML = "♪";
+// "async" betyder at funktionen må vente på svar fra fetch. Uden den ville JS fortsætte videre uden at vente på data.
+async function hentPlaylister() { 
 
-  const rect = speaker.getBoundingClientRect();
-  note.style.left = (e.clientX - rect.left) + "px";
-  note.style.top = (e.clientY - rect.top) + "px";
+const response = await fetch("data/playlister.json"); //"fetch()" henter data fra min json fil. 
 
-  container.appendChild(note);
+// ".json()" konverterer svaret fra JSON-format til et JS array. Jeg bruger await igen fordi det også tager lidt tid. 
+const playlister = await response.json();
 
-  setTimeout(() => note.remove(), 2000);
-});
-
+visPlaylister(playlister); // Nu har jeg data - kald funktionen der viser "playlistkortene" på landingpage
+}
