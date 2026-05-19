@@ -1,9 +1,23 @@
 [
-{
+    {
+    "navn": "Dinner plans", 
+    "stemning": "Smooth vibes for a cozy dinner",
+    "emoji": "🥂",
+    "link": "https://open.spotify.com/playlist/5yAVjd5BUvd4Pl2T0mJikd?si=hoaNAlHCTMW13azcpZj4Og"
+    },
+
+    {
+    "navn": "Comfy mornings", 
+    "stemning": "Get a nice start to the day with these old-school tracks",
+    "emoji": "📻",
+    "link": "https://open.spotify.com/playlist/5egq08kW1Tlfr5kmDYBmkF?si=J2f_roXxSnGiTqdmMleveQ"
+    },
+
+    {
     "navn": "", 
     "stemning": "",
     "emoji": "",
     "link": ""
-},
+    },
 
 ]
