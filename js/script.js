@@ -60,3 +60,10 @@ function visPlaylister(playlister) {
     container.appendChild(kort);
   });
 }
+
+// ----------------------------------------
+// START - kald funktionen så siden loader playlister
+// ----------------------------------------
+
+// Kalder hentPlaylister() så snart script.js kører
+hentPlaylister();

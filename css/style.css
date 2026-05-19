@@ -296,6 +296,41 @@
         transform: scale(1.03); /* skaleringen af funktionen */
       }
 
+/* ---------------------------------------- */
+/* PLAYLISTE SEKTIONEN */
+/* ---------------------------------------- */
+      .playlister { /* layout af selve sektionen med overskrift og kort */
+        padding: 50px 15%;
+        text-align: center;
+      }
+      #playlistHeadline { /* Styling af overskrift*/
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+      }
+      #playlistSubtitle { /* Styling af brødtekst*/
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+      }
+      #playlist-container { /* Grid layout - viser kortene i 2 kolonner */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .playlist-kort { /* Sytling af kortet */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 30px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+     
+
+
+  
+
 /* --------------------------- */
 /* OMKRING LUMINA SEKSIONEN */
 /* --------------------------- */
