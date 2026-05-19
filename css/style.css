@@ -10,7 +10,7 @@
       body {
         font-family: 'Montserrat', sans-serif; 
         color:rgb(77, 96, 73);
-        background-color: rgb(204, 214, 196); /* startfarve */
+        background-color: #ccd6c4; /* startfarve */
       }
 /* --------------------------- */
 /* HERO SEKTIONEN */
@@ -322,18 +322,19 @@
       .playlist-kort { /* Sytling af kortet */
         background: rgba(255, 255, 255, 0.2);
         border-radius: 20px;
-        padding: 30px;
+        padding: 20px;
         cursor: pointer;
         transition: 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);  /* skygge som på features */
       }
       .playlist-kort:hover { /* Hover effekt på kortet */
         transform: scale(1.03);
         background: rgba(255, 255, 255, 0.4);
       }
       .playlist-emoji { /* Emojien øverst på kortet */
-        font-size: 3rem;
+        font-size: 1.8rem;
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
       .playlist-kort h3 { /* Playlist navn */
         font-size: 1.3rem;
@@ -349,7 +350,7 @@
       }
       .playlist-knap { /* Knappen på kortet */
         padding: 12px 30px;
-        background-color: #5b924f;
+        background-color: rgb(77, 96, 73);
         color: white;
         border: none;
         border-radius: 55px;
@@ -358,24 +359,18 @@
         cursor: pointer;
         transition: 0.3s ease;
       }
-
       .playlist-knap:hover {
         background-color: #2f3d2f;
       }
 
-
-  
-
 /* --------------------------- */
 /* OMKRING LUMINA SEKSIONEN */
 /* --------------------------- */
-      
-      #textAboutLumina{
-        
+      #om{
         padding: 30px 60px;
         margin: 30px auto;
-        }
-      #textAboutLumina p{
+      }
+      #om p{
         max-width: 700px;  /* Max bredde for læsbarhed */
         font-size: 1.15rem;
         line-height: 2;
@@ -383,8 +378,7 @@
         margin-bottom: 20px;
         text-align: center; 
       }
-      
-    .anmeldelserKnap {
+      .anmeldelserKnap {
         display: block;   /* blokerer knap og gør margin auto virker */
         margin: 40px auto 30px auto; /* afstand til andre elementer */
         padding: 20px 65px;     /* Afgør bredde og højde på former i pixels */
@@ -402,7 +396,6 @@
         width: 100%;
         height: auto;       /* Bevarer proportioner */
         display: block;    /* Fjerner inline-block whitespace */
-       
       }
       .anmeldelserKnap:hover {               /* giver kanppen bevægelse "hover" når mussen bevæger sig over den */
         background-color: #2f3d2f;  /* Når knappen bevæger sig ændres baggrundsfarven */
@@ -419,7 +412,7 @@
         padding: 16px;
         font-size: 14px;
         line-height: 30px;
-        }
+      }
     /* footer tekst */
         .footer-inner {
         display: grid;
@@ -428,5 +421,27 @@
         max-width: 600px; /* juster bredden */
         margin: 0 auto;   /* centrer indholdet */
         text-align: center; /* så kolonner står i midten */
-        }
-    
+      }
+
+/* --------------------------- */
+/* NAVIGATION */
+/* --------------------------- */
+      .site-nav { /* Selve nav-baren — transparent over hero, fylder hele bredden */
+        position: fixed; /* Forbliver øverst mens man scroller */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100; /* Ligger ovenpå alt andet på siden */
+        display: flex; /* Flexbox: logo, links og knap på én linje */
+        align-items: center;/* Vertikal centrering af alle elementer */
+        justify-content: space-between; /* Logo til venstre, knap til højre */
+        padding: 20px 7.5%; /* Samme vandrette margin som hero-tekst */
+        background-color: transparent; /* Usynlig over hero-billedet */
+        transition: background-color 0.4s ease, padding 0.4s ease;
+      }
+      .site-nav.scrolled { /* Når JS tilføjer klassen .scrolled, får nav en baggrund */
+        background-color: rgba(204, 214, 196, 0.97); /* Sidefarve næsten uigennemsigtig */
+        padding: 12px 7.5%; /* Bliver lidt smallere når man scroller */
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      }
+
