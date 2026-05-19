@@ -326,7 +326,42 @@
         cursor: pointer;
         transition: 0.3s ease;
       }
-     
+      .playlist-kort:hover { /* Hover effekt på kortet */
+        transform: scale(1.03);
+        background: rgba(255, 255, 255, 0.4);
+      }
+      .playlist-emoji { /* Emojien øverst på kortet */
+        font-size: 3rem;
+        display: block;
+        margin-bottom: 15px;
+      }
+      .playlist-kort h3 { /* Playlist navn */
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        color: rgb(77, 96, 73);
+      }
+      .playlist-kort p { /* Stemning teksten */
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: rgb(77, 96, 73);
+      }
+      .playlist-knap { /* Knappen på kortet */
+        padding: 12px 30px;
+        background-color: #5b924f;
+        color: white;
+        border: none;
+        border-radius: 55px;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .playlist-knap:hover {
+        background-color: #2f3d2f;
+      }
 
 
   
