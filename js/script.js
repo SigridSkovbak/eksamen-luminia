@@ -19,6 +19,39 @@ window.addEventListener("scroll", () => {
 });
 
 // ----------------------------------------
+// PRODUKTBILLEDE - COLOR SWITCHER
+// ----------------------------------------
+
+// Color switcher — skifter produktbillede og farvenavn ved klik
+const mainImage = document.getElementById("productPicture"); // Finder hovedbilledet via id="productPicture"
+
+// Finder alle colorways på siden og samler dem i en liste
+// "querySelectorAll" returnerer en NodeList — lidt som et array af elementer
+const colorOptions = document.querySelectorAll(".colorOption");
+
+// Finder teksten der viser det valgte farvenavn under knapperne
+const selectedColorText = document.querySelector(".selectedColor em");
+
+// Løber igennem hver farveknap i listen — én ad gangen
+colorOptions.forEach((option) => {
+    option.addEventListener("click", () => { //Lytter efter når brugeren klikker
+
+        // Løber igennem ALLE farveknapper og fjerner .active klassen
+        // Dette sikrer at kun én farve er aktiv ad gangen
+        colorOptions.forEach(o => o.classList.remove("active"));
+        option.classList.add("active");
+
+        // Hent billedets src og farvenavn fra det klikkede option
+        const newSrc = option.querySelector("img").src;
+        const newName = option.querySelector(".colorName").textContent;
+
+        // Opdater hovedbilledet og farvenavnet
+        mainImage.src = newSrc;
+    });
+});
+
+
+// ----------------------------------------
 // FETCH PLAYLISTER FRA JSON FIL
 // ----------------------------------------
 

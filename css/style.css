@@ -131,92 +131,113 @@
 /* PRODUKT SEKTIONEN MED FARVER */
 /* --------------------------- */
       .productBrowse {
-        padding: 10px 12%; /* Laver plads omkring hele sektionen: 70px top/bund, 12% venstre/højre */
-        display: grid;
-        justify-items: center; /* Centrerer elementerne INDE i gridet */
-        gap: 50px;             /* Laver 50px mellemrum mellem rækker i grid */
+        padding: 80px 8%; /* Laver plads omkring hele sektionen: 80px top/bund, 8% venstre/højre */
+        display: flex; /* Flexbox frem for grid */
+        flex-direction: row; /* Billede og colorways side om side */
+        align-items: center; /* Vertikal centrering */
+        gap: 80px; /* Afstand mellem billede og colorways */
         }
     /* --------------------------- */
     /* Hovedbillede */
       #productPicture {
-        width: 100%;
-        max-width: 500px;   /* Max bredde */
-        height: auto;       /* Bevarer proportioner */
-        display: block;    /* Fjerner inline-block whitespace */
+        width: 45%;
+        max-width: 550px; /* Max bredde */
+        height: auto;  /* Bevarer proportioner */
+        display: block;  /* Fjerner inline-block whitespace */
         }
     /* --------------------------- */
-    /* Layout for colorways */
+    /* Højre kolonne med al tekst og farver */
+      .productInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        flex: 1;
+      }
+      .productTitle {
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: rgb(77, 96, 73);
+      }
+      .productDescription {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: rgb(77, 96, 73);
+        max-width: 480px;
+      }
+    /* --------------------------- */
+    /* Layout for colorways - nu lodret kolonne*/
       .productColor {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 kolonner med lige stor bredde (1 fraction hver) */
-        justify-content: center; /* Centrerer hele gridet horisontalt i containeren */
-        gap: 90px; /* Laver 90px mellem hver farveboks */
-        }
+        display: flex; /* Flexbox frem for grid */
+        flex-direction: row;     /* Farver på række */
+        gap: 16px; /* Laver 16px mellem hver farveboks */
+      }
     /* --------------------------- */
     /* Wrapper omkring hvert billede */
       .colorOption {
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-radius: 10px; /* fast radius */
+        border-radius: 12px; /* fast radius */
         background-color: transparent; /* start uden farve */
-        padding: 5px;  /* fast padding, ikke på hover */
-        }
-    /* --------------------------- */
-    /* Hover effekt på containeren */
-     .colorOption:hover {
-        background-color: rgb(204, 214, 196);  /* Baggrund bliver lys grøn/grå ved hover */
-        }
-    /* --------------------------- */
-    /* Selve farvebillederne */
-      .colorOption img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 10px;
+        border: 2px solid transparent;
+        padding: 6px; /* fast padding, ikke på hover */
         cursor: pointer;
+        transition: border 0.3s ease;
+      }
+    /* --------------------------- */
+    /* Valgt farve får grøn border */
+      .colorOption.active {
+        border: 2px solid rgb(77, 96, 73);
+      }
+      .colorOption img {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 8px;
         transition: transform 0.3s ease;
-        }
+      }
     /* --------------------------- */
-    /* Hover effekt på containeren*/
       .colorOption:hover img {
-        transform: scale(1.3);  
-        }
+        transform: scale(1.08);
+      }
     /* --------------------------- */
-    /* Farvenavnet (skjult som standard fra start) */
-      .colorName {
-        margin-top: 12px;
-        font-size: 0.9rem;
-        font-style: italic; /* Gør teksten skråskrift */
+     .colorName {
+        margin-top: 6px;
+        font-size: 0.75rem;
+        font-style: italic;
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(6px);
         transition: opacity 0.3s ease, transform 0.3s ease;
         color: rgb(77, 96, 73);
-        }
+      }
     /* --------------------------- */
-    /* Vis farvenavnet ved hover */
-      .colorOption:hover .colorName {
+      .colorOption:hover .colorName,
+      .colorOption.active .colorName {
         opacity: 1;
         transform: translateY(0);
-        }
-
+      }
     /* --------------------------- */
-     /*Alt tekst sat ind i Sectioner*/
-     section {
-      padding: 50px 15%; /* Top/bund og venstre/højre padding */
-      text-align: center;  /* Centrerer al tekst i section */
-    }
-     /* --------------------------- */
-     /*Produkt tekst*/
-    #textAboutProduct p{
-      max-width: 700px;  /* Max bredde for læsbarhed */
-      font-size: 1.15rem;
-      line-height: 2;
-      margin: 0 auto;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      text-align: center;
-    }
+    /* KØB NU knap */
+      .productButton {
+        display: inline-block;
+        padding: 18px 40px;
+        background-color: #5b924f;
+        color: white;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        max-width: 320px;
+      }
+      .productButton:hover {
+        background-color: #2f3d2f;
+        transform: scale(1.03);
+      }
+
 /* --------------------------- */
 /* PRODUKT FUNKTIONER SEKSIONEN */
 /* --------------------------- */
@@ -224,6 +245,7 @@
         font-size: 2.5rem;
         letter-spacing: 3px;
         margin-bottom: 35px; /* Afstand under overskrift */
+        text-align: center;
       }
       .featuresContainer {
         display: grid;   /* Grid container for kolonner */
@@ -277,6 +299,7 @@
       #inspoHeadline{
         font-size: 2rem;
         margin-bottom: 40px;
+        text-align: center;
       }
       .inspoPlaces{ /* Grid layout for billederne */
         display: grid;
