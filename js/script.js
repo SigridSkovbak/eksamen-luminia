@@ -96,7 +96,7 @@ function goTo(index) {
 
     // Løber igennem alle dots og fjerner active fra dem alle
     // Derefter sætter den active på den dot der matcher det aktive kort
-    dokument.querySelectorAll(".dot").forEach (function(dot, i){
+    document.querySelectorAll(".dot").forEach (function(dot, i){
       dot.classList.remove("active");
       if (i===current){
         dot.classList.add("active");

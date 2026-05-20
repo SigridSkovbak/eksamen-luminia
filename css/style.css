@@ -334,7 +334,7 @@
       }
 
 /* Dots-containeren — holder alle dots på en linje */
-      .highlights-dots {
+      .highlight-dots {
         display: flex; /* Dots på en vandret linje */
         gap: 8px;
       }
