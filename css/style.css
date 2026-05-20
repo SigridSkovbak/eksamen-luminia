@@ -241,6 +241,10 @@
 /* --------------------------- */
 /* PRODUKT FUNKTIONER SEKSIONEN */
 /* --------------------------- */
+
+      .features {
+        padding: 50px 15% 80px 15%;  /* ekstra luft i bunden */
+      }
       #featuresHeadline{
         font-size: 2.5rem;
         letter-spacing: 3px;
