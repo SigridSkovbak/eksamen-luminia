@@ -444,4 +444,50 @@
         padding: 12px 7.5%; /* Bliver lidt smallere når man scroller */
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
       }
+      .nav-logo { /* Logo-teksten i venstre hjørne*/
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 6px;
+        color: rgba(255, 255, 255, 0.95); /* Hvid over hero */
+        text-decoration: none;
+        transition: color 0.4s ease;
+      }
+      .site-nav.scrolled .nav-logo { /* Logo skifter farve når nav er scrollet ned */
+        color: rgb(77, 96, 73);    /* Din primære tekstfarve */
+      }
+      .nav-links { /* Listen med links — læg dem på en linje */
+        display: flex; /* Links på en vandret linje */
+        gap: 40px; /* Afstand mellem hvert link */
+        list-style: none; /* Fjerner standard bullets */
+      }
+      .nav-links a { /* Selve link-teksterne */
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: rgba(255, 255, 255, 0.85); /* Hvid over hero */
+        transition: color 0.3s ease;
+      }
+      
+      .site-nav.scrolled .nav-links a { /* Links skifter farve når scrolled */
+        color: rgb(77, 96, 73);
+      }
+      .nav-links a:hover { /* Hover effekt på links */
+        color: #5b924f; /* grønne accent-farve */
+      }
+      .nav-cta:hover {
+        background-color: #2f3d2f;
+        transform: scale(1.05);
+      }
+      .nav-cta { /* KØB NU knappen i nav */
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding: 10px 28px;
+        background-color: #5b924f;
+        color: rgb(206, 223, 208);
+        border-radius: 15px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
 

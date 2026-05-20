@@ -1,4 +1,24 @@
 // ----------------------------------------
+// NAVIGATIONSBAR (js tilføjer og fjerne class)
+// ----------------------------------------
+
+// Finder nav-elementet i HTML via id="siteNav" og gemmer det i variablen "nav"
+const nav = document.getElementById("siteNav");
+// Lytter på window (hele browservinduet) — hver gang brugeren scroller kører funktionen
+window.addEventListener("scroll", () => {
+
+    // "window.scrollY" = hvor mange pixels brugeren har scrollet ned fra toppen
+    if (window.scrollY > 80) { // Hvis det er mere end 80px...
+        // ...tilføj klassen "scrolled" til nav-elementet
+        // CSS bruger denne klasse til at give nav en baggrundsfarve
+        nav.classList.add("scrolled");
+    } else {
+        // Hvis brugeren scroller tilbage til toppen, fjern klassen igen og Nav bliver gennemsigtig igen
+        nav.classList.remove("scrolled");
+    }
+});
+
+// ----------------------------------------
 // FETCH PLAYLISTER FRA JSON FIL
 // ----------------------------------------
 
