@@ -56,9 +56,9 @@ colorOptions.forEach((option) => {
 // Highlights slider — lader brugeren bladre mellem produktets højdepunkter
 
 // Finder slideren, alle kort, dots-containeren og pile-knapperne i HTML
-const track = document.querySelector(".highlights-track");
+const track = document.querySelector(".highlight-track");
 const cards = document.querySelectorAll(".highlight-card");
-const dotsContainer = document.getElementById("highlightsDots");
+const dotsContainer = document.getElementById("highlightDots");
 const prevBtn = document.getElementById("highlightPrev");
 const nextBtn = document.getElementById("highlightNext");
 
