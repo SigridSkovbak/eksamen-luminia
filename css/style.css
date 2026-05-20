@@ -8,7 +8,7 @@
 --color-accent: #7A6A5A;  /* accent — bruges til at fremhæve */
 --color-button: #6B5744;
 --color-button-hover: #3D2E22;
---color-nav: rgba(245, 240, 232, 0.97); /* Nav bar baggrund ved scroll */
+--color-nav: #DDD5C5; /* Nav bar baggrund ved scroll */
 }
       /* "*" er en universel selector = gælder for alle elementer på siden*/
       * { 
@@ -224,20 +224,21 @@
     /* KØB NU knap */
       .productButton {
         display: inline-block;
-        padding: 18px 40px;
-        background-color: var(--color-button);
-        color: white;
+        padding: 14px 35px;
+        background-color: transparent;
+        color: var(--color-button);
         font-size: 0.95rem;
         font-weight: 700;
         letter-spacing: 2px;
-        border: none;
-        border-radius: 50px;
+        border: 2px solid var(--color-button);
+        border-radius: 18px;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.3s ease;
-        max-width: 320px;
+        max-width: 270px;
       }
       .productButton:hover {
-        background-color: var(--color-button-hover);
+        background-color: var(--color-button);
+        color: white;
         transform: scale(1.03);
       }
 
