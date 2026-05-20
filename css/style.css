@@ -2,13 +2,11 @@
 /* CUSTOM PROPERTIES*/
 /* --------------------------- */
 :root{
---color-bg: #F5F0E8;  /* baggrund */
---color-bg-alt: ;  /* til footer og sektioner */
---color-text: ;
---color-accent: ;  /* accent — bruges til at fremhæve */
---color-button: ;
---color-button-hover: ;
---color-nav: ; /* Nav bar baggrund ved scroll */
+--color-bg: #E8E0D0;  /* baggrund */
+--color-text: #4A3F35;
+--color-accent: #7A6A5A;  /* accent — bruges til at fremhæve */
+--color-button-hover: #3D2E22;
+--color-nav: rgba(245, 240, 232, 0.97); /* Nav bar baggrund ved scroll */
 }
       /* "*" er en universel selector = gælder for alle elementer på siden*/
       * { 
@@ -21,8 +19,8 @@
       /*Fælles styling for alle elementer i body dvs. næsten hele koden*/
       body {
         font-family: 'Montserrat', sans-serif; 
-        color:rgb(77, 96, 73);
-        background-color: #ccd6c4; /* startfarve */
+        color: var(--color-text);
+        background-color: var(--color-bg); /* startfarve */
       }
 /* --------------------------- */
 /* HERO SEKTIONEN */
@@ -53,7 +51,7 @@
         height: 200px;
         pointer-events: none;  /* så man stadig kan klikke igennem */
         z-index: 1;
-        background: linear-gradient(to bottom, transparent, rgb(204, 214, 196));
+        background: linear-gradient(to bottom, transparent, var(--color-bg));
       }
       /* Mørk gradient på venstre side så tekst er læsbar */
       .hero::before {
@@ -100,7 +98,7 @@
         letter-spacing: 2px;
         line-height: 1.7;
         font-weight: 50;
-        color: rgba(255, 255, 255, 0.952);
+        color: rgba(255, 255, 255, 0.9);
       }
       #heroText2 {
         font-size: 1.1rem;
@@ -126,7 +124,7 @@
       /* --------------------------- */
       /* Hover effekt på hero knapper */
       .heroButton:hover {               /* giver kanppen bevægelse "hover" når mussen bevæger sig over den */
-        background-color: #2f3d2f;  /* Når knappen bevæger sig ændres baggrundsfarven */
+        background-color: var(--color-button-hover);  /* Når knappen bevæger sig ændres baggrundsfarven */
         transform: scale(1.05);  
       }
 
@@ -160,12 +158,12 @@
         font-size: 2.5rem;
         font-weight: 300;
         letter-spacing: 1px;
-        color: rgb(77, 96, 73);
+        color: var(--color-text);
       }
       .productDescription {
         font-size: 1rem;
         line-height: 1.8;
-        color: rgb(77, 96, 73);
+        color: var(--color-text);
         max-width: 480px;
       }
     /* --------------------------- */
@@ -191,7 +189,7 @@
     /* --------------------------- */
     /* Valgt farve får grøn border */
       .colorOption.active {
-        border: 2px solid rgb(77, 96, 73);
+        border: 2px solid var(--color-text);
       }
       .colorOption img {
         width: 90px;
@@ -212,7 +210,7 @@
         opacity: 0;
         transform: translateY(6px);
         transition: opacity 0.3s ease, transform 0.3s ease;
-        color: rgb(77, 96, 73);
+        color: var(--color-text);
       }
     /* --------------------------- */
       .colorOption:hover .colorName,
@@ -225,7 +223,7 @@
       .productButton {
         display: inline-block;
         padding: 18px 40px;
-        background-color: #5b924f;
+        background-color: var(--color-button);
         color: white;
         font-size: 0.95rem;
         font-weight: 700;
@@ -237,7 +235,7 @@
         max-width: 320px;
       }
       .productButton:hover {
-        background-color: #2f3d2f;
+        background-color: var(--color-button-hover);
         transform: scale(1.03);
       }
 
@@ -269,7 +267,7 @@
         padding: 20px 25px; /* indvendig afstand */
         border-radius: 25px; /* afrundede hjørner */
         font-weight: 550;
-        color: rgb(77, 96, 73); /* font farve */
+        color: var(--color-text); /* font farve */
         box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* let skygge */
         min-height: 60px;          /* ens højde på alle felter */
       }
@@ -337,7 +335,7 @@
       }
       .playlist-kort:hover { /* Hover effekt på kortet */
         transform: scale(1.03);
-        background: rgba(255, 255, 255, 0.4);
+        background: var(--color-button-hover);
       }
       .playlist-emoji { /* Emojien øverst på kortet */
         font-size: 1.8rem;
@@ -348,17 +346,17 @@
         font-size: 1.3rem;
         letter-spacing: 2px;
         margin-bottom: 10px;
-        color: rgb(77, 96, 73);
+        color: var(--color-text);
       }
       .playlist-kort p { /* Stemning teksten */
         font-size: 0.95rem;
         line-height: 1.6;
         margin-bottom: 20px;
-        color: rgb(77, 96, 73);
+        color: var(--color-text);
       }
       .playlist-knap { /* Knappen på kortet */
         padding: 12px 30px;
-        background-color: rgb(77, 96, 73);
+        background-color: var(--color-button);
         color: white;
         border: none;
         border-radius: 55px;
@@ -368,7 +366,7 @@
         transition: 0.3s ease;
       }
       .playlist-knap:hover {
-        background-color: #2f3d2f;
+        background-color: var(--color-button-hover);
       }
 
 /* --------------------------- */
@@ -393,7 +391,7 @@
         font-size: 1rem;
         font-style: italic;
         letter-spacing: 3px;
-        background-color: #445544;
+        background-color: var(--color-button);
         color: white;
         border: none;
         border-radius: 55px;    /* Afrunding/radios på hjørner. Kan også laves med % og flere tal, hvis man vil have en kompliceret form med flere vinkler/afrundinger */
@@ -406,7 +404,7 @@
         display: block;    /* Fjerner inline-block whitespace */
       }
       .anmeldelserKnap:hover {               /* giver kanppen bevægelse "hover" når mussen bevæger sig over den */
-        background-color: #2f3d2f;  /* Når knappen bevæger sig ændres baggrundsfarven */
+        background-color: var(--color-button-hover);  /* Når knappen bevæger sig ændres baggrundsfarven */
         transform: scale(1.05);     /* transformere knappen ved at scalere den 1.05 gang = den bliver 5% større */
       }
       
@@ -415,8 +413,8 @@
 /* --------------------------- */
     /* footer boksen/farven */
       .site-footer {
-        background-color: #99A490;
-        color: rgb(77, 96, 73);
+        background-color: var(--color-bg-alt);
+        color: var(--color-text);
         padding: 30px 7.5%;
       }
     /* footer layout */
@@ -493,7 +491,7 @@
         transition: background-color 0.4s ease, padding 0.4s ease;
       }
       .site-nav.scrolled { /* Når JS tilføjer klassen .scrolled, får nav en baggrund */
-        background-color: rgba(204, 214, 196, 0.97); /* Sidefarve næsten uigennemsigtig */
+        background-color: var(--color-nav); /* Sidefarve næsten uigennemsigtig */
         padding: 12px 7.5%; /* Bliver lidt smallere når man scroller */
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
       }
@@ -506,7 +504,7 @@
         transition: color 0.4s ease;
       }
       .site-nav.scrolled .nav-logo { /* Logo skifter farve når nav er scrollet ned */
-        color: rgb(77, 96, 73);    /* Din primære tekstfarve */
+        color: var(--color-text);    /* Din primære tekstfarve */
       }
       .nav-links { /* Listen med links — læg dem på en linje */
         display: flex; /* Links på en vandret linje */
@@ -523,13 +521,13 @@
       }
       
       .site-nav.scrolled .nav-links a { /* Links skifter farve når scrolled */
-        color: rgb(77, 96, 73);
+        color: var(--color-text);
       }
       .nav-links a:hover { /* Hover effekt på links */
-        color: #5b924f; /* grønne accent-farve */
+        color: var(--color-button); /* grønne accent-farve */
       }
       .nav-cta:hover {
-        background-color: #2f3d2f;
+        background-color: var(--color-button-hover);
         transform: scale(1.05);
       }
       .nav-cta { /* KØB NU knappen i nav */
@@ -538,8 +536,8 @@
         font-weight: 700;
         letter-spacing: 2px;
         padding: 10px 28px;
-        background-color: #5b924f;
-        color: rgb(206, 223, 208);
+        background-color: var(--color-button);
+        color: var(--color-bg-alt);
         border-radius: 15px;
         transition: background-color 0.3s ease, transform 0.3s ease;
       }
