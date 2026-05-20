@@ -84,9 +84,8 @@ cards.forEach(function(card, i) {
     dotsContainer.appendChild(dot); //Her er enkelt dot "child" af cot containeren i html
 });
 
-
 // Funktion der flytter slideren til et bestemt kort
-functions goTo(index) {
+function goTo(index) {
 
     //Opdater current til det nye kortnummer
     current = index;
