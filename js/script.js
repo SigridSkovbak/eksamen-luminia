@@ -171,7 +171,7 @@ function visPlaylister(playlister) {
       <span class="playlist-emoji">${playlist.emoji}</span>
       <h3>${playlist.navn}</h3>
       <p>${playlist.stemning}</p>
-      <button class="playlist-knap">Åbn playlist</button>
+      <button class="playlist-knap">Gå til playlist</button>
     `;
 
     // "addEventListener()" lytter efter om brugeren klikker på playlist kortet.
