@@ -50,6 +50,83 @@ colorOptions.forEach((option) => {
     });
 });
 
+// ----------------------------------------
+// HIGHLIGHTS CARDS LOGIK
+// ----------------------------------------
+// Highlights slider — lader brugeren bladre mellem produktets højdepunkter
+
+// Finder slideren, alle kort, dots-containeren og pile-knapperne i HTML
+const track = document.querySelector(".highlights-track");
+const cards = document.querySelectorAll(".highlight-card");
+const dotsContainer = document.getElementById("highlightsDots");
+const prevBtn = document.getElementById("highlightPrev");
+const nextBtn = document.getElementById("highlightNext");
+
+let current = 0; // Holder styr på hvilket kort der vises
+
+// Lav en dot for hvert kort i slideren
+cards.forEach(function(card, i) {
+    // Opretter et nyt div element i JS og giver det klassen "dot"
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+
+    // Første dot starter som aktiv så den matcher det første kort
+    if (i === 0) {  
+      dot.classList.add("active"); 
+    }
+
+    // Når man klikker på en dot, springer slideren til det tilhørende kort
+    dot.addEventListener("click", function() {
+      goTo(i); 
+    });
+
+    //Tilføjer dot'en til dot-containeren i html
+    dotsContainer.appendChild(dot); //Her er enkelt dot "child" af cot containeren i html
+});
+
+
+// Funktion der flytter slideren til et bestemt kort
+functions goTo(index) {
+
+    //Opdater current til det nye kortnummer
+    current = index;
+
+    // Hvert kort er 100% bredt — kort nr. 2 ligger på -100%, nr. 3 på -200% osv.
+    // translateX flytter hele track'en til venstre så det rigtige kort vises
+    track.style.transform = "translateX(-" + (current * 100) + "%)";
+
+    // Løber igennem alle dots og fjerner active fra dem alle
+    // Derefter sætter den active på den dot der matcher det aktive kort
+    dokument.querySelectorAll(".dot").forEach (function(dot, i){
+      dot.classList.remove("active");
+      if (i===current){
+        dot.classList.add("active");
+      }
+    });
+}
+
+//PILE
+// Venstre pil (prev) — gå ét kort tilbage
+prevBtn.addEventListener("click", function() {
+
+    // Hvis vi er på første kort, hop til det sidste — ellers gå én tilbage
+    if (current === 0) {
+        goTo(cards.length - 1);
+    } else {
+        goTo(current - 1);
+    }
+});
+    
+// Højre pil — gå ét kort frem
+nextBtn.addEventListener("click", function() {
+
+    // Hvis vi er på sidste kort, hop til det første — ellers gå én frem
+    if (current === cards.length - 1) {
+        goTo(0);
+    } else {
+        goTo(current + 1);
+    }
+});
 
 // ----------------------------------------
 // FETCH PLAYLISTER FRA JSON FIL
