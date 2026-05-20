@@ -272,28 +272,6 @@
       }
 
 /* --------------------------- */
-/* KØB NU KNAP */
-/* --------------------------- */  
-      /* Knappen */
-      .button {
-        display: block;   /* blokerer knap og gør margin auto virker */
-        margin: 10px auto; /* afstand til andre elementer */
-        padding: 20px 65px;     /* Afgør bredde og højde på former i pixels */
-        font-size: 1rem;
-        letter-spacing: 3px;
-        background-color: #445544;
-        color: white;
-        border: none;
-        border-radius: 55px;    /* Afrunding/radios på hjørner. Kan også laves med % og flere tal, hvis man vil have en kompliceret form med flere vinkler/afrundinger */
-        cursor: pointer;      /* Musens markør bliver til en hånd (klik-ikon), når man holder den over elementet */
-        transition: 0.3s ease;      /* Transformationen/animationen af knappen tager 3 milisekunder og "ease" er en timing function = bestemmer bevægelsens tempo-kurve*/
-      }
-      .button:hover {               /* giver kanppen bevægelse "hover" når mussen bevæger sig over den */
-        background-color: #2f3d2f;  /* Når knappen bevæger sig ændres baggrundsfarven */
-        transform: scale(1.05);     /* transformere knappen ved at scalere den 1.05 gang = den bliver 5% større */
-      }
-
-/* --------------------------- */
 /* INSPO SEKTIONEN */
 /* --------------------------- */
       #inspoHeadline{
