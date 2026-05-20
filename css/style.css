@@ -3,8 +3,10 @@
 /* --------------------------- */
 :root{
 --color-bg: #E8E0D0;  /* baggrund */
+--color-bg-alt: #DDD5C5;  /* til footer og sektioner */
 --color-text: #4A3F35;
 --color-accent: #7A6A5A;  /* accent — bruges til at fremhæve */
+--color-button: #6B5744;
 --color-button-hover: #3D2E22;
 --color-nav: rgba(245, 240, 232, 0.97); /* Nav bar baggrund ved scroll */
 }
