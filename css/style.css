@@ -289,13 +289,14 @@
       .highlight-text { 
         position: absolute;/* Løfter teksten ud af normal flow */
         bottom: 0; /* Placerer den i bunden */
+        top: auto;
         left: 0;
         right: 0;
         padding: 40px 30px 30px 30px;
         text-align: center;
         background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.55));
         border-radius: 0 0 20px 20px;  /* Matcher billedets border-radius i bunden */
-        
+        display: block;
       }
 
       .highlight-text h3 {
@@ -486,9 +487,9 @@
         font-size: 1rem;
         font-style: italic;
         letter-spacing: 3px;
-        background-color: var(--color-button);
-        color: white;
-        border: none;
+        background-color: transparent;
+        color: var(--color-text);
+        border: 2px solid var(--color-text);
         border-radius: 18px;    /* Afrunding/radios på hjørner. Kan også laves med % og flere tal, hvis man vil have en kompliceret form med flere vinkler/afrundinger */
         cursor: pointer;      /* Musens markør bliver til en hånd (klik-ikon), når man holder den over elementet */
         transition: 0.3s ease;      /* Transformationen/animationen af knappen tager 3 milisekunder og "ease" er en timing function = bestemmer bevægelsens tempo-kurve*/
