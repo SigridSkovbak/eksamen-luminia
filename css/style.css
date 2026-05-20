@@ -2,7 +2,13 @@
 /* CUSTOM PROPERTIES*/
 /* --------------------------- */
 :root{
-color-bg: #F5F0E8; 
+--color-bg: #F5F0E8;  /* baggrund */
+--color-bg-alt: ;  /* til footer og sektioner */
+--color-text: ;
+--color-accent: ;  /* accent — bruges til at fremhæve */
+--color-button: ;
+--color-button-hover: ;
+--color-nav: ; /* Nav bar baggrund ved scroll */
 }
       /* "*" er en universel selector = gælder for alle elementer på siden*/
       * { 
