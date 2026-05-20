@@ -118,7 +118,7 @@
         background-color: transparent; /* gennemsigtig baggrund */
         color: white;
         border: 2px solid white; /* hvid kant */
-        border-radius: 15px;
+        border-radius: 18px;
         cursor: pointer;
         transition: 0.3s ease;
         width: fit-content;
@@ -330,8 +330,8 @@
       }
       .playlist-kort { /* Sytling af kortet */
         background: rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        padding: 20px;
+        border-radius: 18px;
+        padding: 15px;
         cursor: pointer;
         transition: 0.3s ease;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);  /* skygge som på features */
@@ -390,14 +390,14 @@
       .anmeldelserKnap {
         display: block;   /* blokerer knap og gør margin auto virker */
         margin: 40px auto 30px auto; /* afstand til andre elementer */
-        padding: 20px 65px;     /* Afgør bredde og højde på former i pixels */
+        padding: 14px 50px;     /* Afgør bredde og højde på former i pixels */
         font-size: 1rem;
         font-style: italic;
         letter-spacing: 3px;
         background-color: var(--color-button);
         color: white;
         border: none;
-        border-radius: 55px;    /* Afrunding/radios på hjørner. Kan også laves med % og flere tal, hvis man vil have en kompliceret form med flere vinkler/afrundinger */
+        border-radius: 18px;    /* Afrunding/radios på hjørner. Kan også laves med % og flere tal, hvis man vil have en kompliceret form med flere vinkler/afrundinger */
         cursor: pointer;      /* Musens markør bliver til en hånd (klik-ikon), når man holder den over elementet */
         transition: 0.3s ease;      /* Transformationen/animationen af knappen tager 3 milisekunder og "ease" er en timing function = bestemmer bevægelsens tempo-kurve*/
       }
@@ -527,7 +527,12 @@
         color: var(--color-text);
       }
       .nav-links a:hover { /* Hover effekt på links */
-        color: var(--color-button); /* grønne accent-farve */
+        color: var(--color-button); 
+      }
+
+      .site-nav.scrolled .nav-cta {
+        color: var(--color-text);
+        border-color: var(--color-text)
       }
       .nav-cta:hover {
         background-color: var(--color-button-hover);
@@ -538,10 +543,12 @@
         font-size: 0.85rem;
         font-weight: 700;
         letter-spacing: 2px;
-        padding: 10px 28px;
-        background-color: var(--color-button);
+        padding: 12px 28px;
+        background-color: transparent;
         color: var(--color-bg-alt);
-        border-radius: 15px;
+        border: 2px solid var(--color-bg-alt);
+        border-radius: 18px;
+        cursor: pointer;
         transition: background-color 0.3s ease, transform 0.3s ease;
       }
 
