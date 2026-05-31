@@ -56,24 +56,27 @@ CSS er placeret i en ekstern fil så struktur (HTML) og præsentation (CSS) er a
 ├── data/
 │   └── playlister.json     # JSON-data til playlist-sektionen
 └── img/
+    ├── colorways/
+        ├── luminagrøn.png      # Produkt – Sage Green
+        ├── luminahvid.png      # Produkt – Moonlight White
+        ├── luminalilla.png     # Produkt – Lavender Mist
+        └── luminapink.png      # Produkt – Dusty Rose
+    ├── heropictures/
+        ├── herolys1.png       # Hero baggrundsbillede
+        ├── heropicture.png     # Highlight-kort (vandafvisende)
+        ├── luminafrontpage.png # Inspirationsbillede
     ├── validering/
     │   ├── html-validering.png
     │   └── css-validering.png
-    ├── herolys1.png        # Hero baggrundsbillede
-    ├── herodark.png        # Highlight-kort (ambient lys & bluetooth)
-    ├── heropicture.png     # Highlight-kort (vandafvisende)
-    ├── groupsetting.png    # Inspirationsbillede
-    ├── luminapink.png      # Produkt – Dusty Rose
-    ├── luminahvid.png      # Produkt – Moonlight White
-    ├── luminalilla.png     # Produkt – Lavender Mist
-    ├── luminagrøn.png      # Produkt – Sage Green
-    ├── luminaparty.png     # Highlight & inspiration
-    ├── pinkluminabeach.png # Highlight & inspiration
-    ├── luminagreen.png     # Highlight (bærbar)
-    ├── luminaconnect.png   # Highlight (Social Connect) & inspiration
-    ├── luminagreen1.png    # Inspirationsbillede
-    ├── luminafrontpage.png # Inspirationsbillede
     └── anmeldelser.png     # Trustpilot-anmeldelser
+    ├── groupsetting.png    # Inspirationsbillede
+    ├── herodark.png        # Highlight-kort (ambient lys & bluetooth)
+    ├── luminaconnect.png   # Highlight (Social Connect) & inspiration
+    ├── luminagreen.png     # Highlight (bærbar)
+    ├── luminagreen1.png    # Inspirationsbillede
+    ├── luminaparty.png     # Highlight & inspiration
+    └──  pinkluminabeach.png # Highlight & inspiration
+    
 ```
 Alle filer og mapper er navngivet med små bogstaver og bindestreger i overensstemmelse med god web-praksis. CSS er placeret i en ekstern fil så struktur og præsentation er adskilt. `<script>`-tagget er placeret nederst i `<body>` så HTML er fuldt loadet før JavaScript kører.
 
