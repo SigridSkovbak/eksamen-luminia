@@ -126,9 +126,67 @@ Farver er defineret som CSS-variabler i `:root` så de er nemme at ændre ét st
 Projektet har fire separate JS-funktioner. Al kode er i `js/script.js` som linkes nederst i `<body>`.
 
 ### 1. Navigationsbar — scroll-klasse
+Navigationen starter transparent over hero-billedet. Når brugeren scroller mere end 80px ned, tilføjer JS klassen `.scrolled` som CSS bruger til at give nav en baggrundsfarve:
+```javascript
+const nav = document.getElementById("siteNav");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 80) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+```
 ### 2. Highlights-slider
+En slider der lader brugeren bladre gennem produktets funktioner. JS opretter dynamisk en dot for hvert kort og håndterer navigation med pile og dots. `translateX()` bruges til at skubbe slide-track'en:
+```javascript
+function goTo(index) {
+  current = index;
+  track.style.transform = "translateX(-" + (current * 100) + "%)";
+  document.querySelectorAll(".dot").forEach(function(dot, i) {
+    dot.classList.remove("active");
+    if (i === current) dot.classList.add("active");
+  });
+}
+```
+Pile-knapperne bruger `if/else` til at wrappe rundt (fra første til sidste kort og omvendt).
 ### 3. Color switcher — produktbillede
+Brugerens klik på en farvevariant opdaterer det store produktbillede og markerer den valgte farve med `.active`-klassen. `.forEach()` sikrer at kun én farve er aktiv ad gangen:
+```javascript
+colorOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    colorOptions.forEach(o => o.classList.remove("active"));
+    option.classList.add("active");
+    mainImage.src = option.querySelector("img").src;
+  });
+});
+```
 ### 4. Fetch playlister fra JSON
+Playlist-sektionen henter data fra `data/playlister.json` med `fetch()` og `async/await`, som venter på svar fra fetch. For hver playliste i JSON-filen bygges et HTML-kort dynamisk og indsættes i DOM'en. Klik på et kort åbner Spotify-linket i en ny fane:
+```javascript
+async function hentPlaylister() {
+  const response = await fetch("data/playlister.json");
+  const playlister = await response.json();
+  visPlaylister(playlister);
+}
+function visPlaylister(playlister) {
+  const container = document.querySelector("#playlist-container");
+  playlister.forEach((playlist) => {
+    const kort = document.createElement("div");
+    kort.classList.add("playlist-kort");
+    kort.innerHTML = `
+      <span class="playlist-emoji">${playlist.emoji}</span>
+      <h3>${playlist.navn}</h3>
+      <p>${playlist.stemning}</p>
+      <button class="playlist-knap">Gå til playlist</button>
+    `;
+    kort.addEventListener("click", () => {
+      window.open(playlist.link, "_blank");
+    });
+    container.appendChild(kort);
+  });
+}
+hentPlaylister();
 
 ### JavaScript-koncepter anvendt
 | Koncept | Anvendelse |
