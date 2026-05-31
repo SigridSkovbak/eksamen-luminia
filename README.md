@@ -57,16 +57,20 @@ Alle filer og mapper er navngivet med små bogstaver og bindestreger i overensst
 ---
 ## HTML - Semantiak struktur
 Siden er bygget med semantiske HTML5-elementer for at sikre klar struktur og god tilgængelighed:
-
 | Element | Anvendelse |
 |---------|-----------|
-| `<header>` | Hero-sektionen med overskrift, tekst og CTA-knapper |
-| `<article>` | Produktsektion med farvevælger |
-| `<aside>` | Tekst om produktet og om virksomheden |
-| `<section>` | Funktioner og inspirationsbilleder |
-| `<footer>` | Sidefod med kontaktinfo og links |
-| `<figure>` | Billedgalleri og hero-fade overlay |
-| `<ul>` / `<li>` | Navigationsliste |
+| `<nav>` | Fast navigation øverst med ankerlinks og CTA-knap |
+| `<header>` | Hero med baggrundsbillede, gradient-overlay og heroContent |
+| `<section class="features">` | Highlights-slider med kort, pile og dots |
+| `<article class="productBrowse">` | Produktsektion med billede, farvevælger og køb-knap |
+| `<section class="inspo">` | Inspirationsbilleder i grid-layout |
+| `<section class="playlister">` | Playlist-sektion — indhold genereret dynamisk via JS og JSON |
+| `<aside id="om">` | Om LUMINA – brandtekst og Trustpilot-anmeldelser |
+| `<footer>` | Sidefod med logo, tagline, links og adresse |
+| `<figure>` | Hero-fade overlay og inspirationsbilleder |
+| `<ul>` / `<li>` | Navigation og footer-links |
+
+
 
 ---
 
