@@ -29,9 +29,20 @@ git push origin main - Send det op til GitHub
 ```
 ---
 ## ✅ Validering
-- HTML valideret via 
-- CSS valideret via
-- CSS er placeret i ekstern fil (`css/style.css`) — struktur og præsentation er adskilt
+### HTML
+`index.html` er valideret via [validator.w3.org](https://validator.w3.org/nu/?doc=https://sigridskovbak.github.io/eksamen-luminia/) med værktøjet **Nu Html Checker (vnu 26.5.29)**.
+Første validering gav én advarsel:
+    "This document appears to be written in Danish but the <html> start tag has lang="en". Consider using lang="da" instead."
+
+Advarslen blev rettet ved at ændre <html lang="en"> til <html lang="da"> i index.html, da sidens primære indhold er på dansk. lang-attributten fortæller browsere og skærmlæsere hvilket sprog siden er på — det er vigtigt for tilgængelighed.
+
+**Efter rettelsen: "Document checking completed. No errors or warnings to show."**
+![HTML validering](img/validering/html-validering.png)
+
+### CSS
+`css/style.css` er valideret via [jigsaw.w3.org/css-validator](https://jigsaw.w3.org/css-validator/) — ingen fejl.
+CSS er placeret i en ekstern fil så struktur (HTML) og præsentation (CSS) er adskilt.
+![CSS validering](img/validering/css-validering.png)
 
 ---
 ## 🗂️ Fil- og mappestruktur
@@ -45,6 +56,9 @@ git push origin main - Send det op til GitHub
 ├── data/
 │   └── playlister.json     # JSON-data til playlist-sektionen
 └── img/
+    ├── validering/
+    │   ├── html-validering.png
+    │   └── css-validering.png
     ├── herolys1.png        # Hero baggrundsbillede
     ├── herodark.png        # Highlight-kort (ambient lys & bluetooth)
     ├── heropicture.png     # Highlight-kort (vandafvisende)
