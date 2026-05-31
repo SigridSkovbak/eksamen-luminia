@@ -61,7 +61,7 @@ CSS er placeret i en ekstern fil så struktur (HTML) og præsentation (CSS) er a
         ├── luminahvid.png      # Produkt – Moonlight White
         ├── luminalilla.png     # Produkt – Lavender Mist
         └── luminapink.png      # Produkt – Dusty Rose
-    ├── heropictures/
+    ├── hero-pictures/
         ├── herolys1.png       # Hero baggrundsbillede
         ├── heropicture.png     # Highlight-kort (vandafvisende)
         ├── luminafrontpage.png # Inspirationsbillede
