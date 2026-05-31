@@ -60,7 +60,7 @@ CSS er placeret i en ekstern fil så struktur (HTML) og præsentation (CSS) er a
     │   ├── luminagrøn.png              # "Sage Green"
     │   ├── luminahvid.png              # "Moonlight White"
     │   ├── luminalilla.png             # "Lavender Mist"
-    │   └── luminapink.png              # Dusty Rose
+    │   └── luminapink.png              # "Dusty Rose"
     ├── funktioner-og-settings/         # Billeder til highlights og inspo sektion
     │   ├── groupsetting-dark.png       # Highlight – Ambient lys
     │   ├── groupsetting-light.png      # Highlight – Batteritid
@@ -82,6 +82,7 @@ CSS er placeret i en ekstern fil så struktur (HTML) og præsentation (CSS) er a
     └── trustpilot.png                  # Trustpilot-anmeldelser
     
 ```
+Billeder er navngivet og inddelt i undermapper til img-mappen efter deres funktion på siden.
 Alle filer og mapper er navngivet med små bogstaver og bindestreger i overensstemmelse med god web-praksis. CSS er placeret i en ekstern fil så struktur og præsentation er adskilt. `<script>`-tagget er placeret nederst i `<body>` så HTML er fuldt loadet før JavaScript kører.
 
 ---
