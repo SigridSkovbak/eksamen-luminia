@@ -42,13 +42,17 @@ Landingpagen præsenterer produktet, dets farver og funktioner, og sigter mod at
     ├── luminafrontpage.png # Inspirationsbillede
     └── anmeldelser.png     # Trustpilot-anmeldelser
 ```
+Alle filer og mapper er navngivet med små bogstaver og bindestreger i overensstemmelse med god web-praksis. CSS er placeret i en ekstern fil så struktur og præsentation er adskilt. `<script>`-tagget er placeret nederst i `<body>` så HTML er fuldt loadet før JavaScript kører.
+
+---
 
 ## Teknologier 
-- **HTML** - semantisk markup
-- **CSS** – ekstern stylesheet, Flexbox, CSS Grid, transitions, hover-effekter
-- **JavaScript** - DOM-manipulation, event listeners, dynamiske elementer
-- **GitHub** – versionsstyring
-- **GitHub Pages** – publicering
+- **HTML** - semantisk markup med korrekt brug af `<nav>`, `<header>`, `<section>`, `<article>`, `<aside>` og `<footer>`
+- **CSS** – ekstern stylesheet med CSS custom properties, Flexbox, CSS Grid, transitions og hover-effekter
+- **JavaScript** - DOM-manipulation, event listeners, slider-logik, color switcher og fetch af JSON
+- **JSON** - ekstern datafil til playlist-sektionen
+- **GitHub** – versionsstyring med Git
+- **GitHub Pages** – publicering og hosting
 
 ---
 ## HTML - Semantiak struktur
