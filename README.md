@@ -1,14 +1,13 @@
 # LUMINA Audio – Landing Page
-
 **Multimediedesigner, 1. semester · Case: Landing Page**  
 Eksamensprojekt – forbedret version
 
 ---
 ## 🔗 Links 
-🌐 Live produkt (GitHub Pages)
-💾 GitHub Repository
-🎨 Figma designfil
-📱 Figma prototype 
+- 🌐 Live produkt (GitHub Pages)
+- 💾 GitHub Repository
+- 🎨 Figma designfil - https://www.figma.com/design/KCLmuvT71czhP7Q83Mvk3I/Eksamen--Landingpage-LUMINA?node-id=0-1&t=N9BD1L8FA4k4gOhr-1 
+- 📱 Figma prototype 
 
 ## 📋 Projektbeskrivelse
 Dette projekt er en landingpage for **LUMINA One** – en bærbar Bluetooth-højttaler fra det fiktive brand *LUMINA Audio*. Projektet er udviklet som en del af 1. semesters eksamen på Multimediedesigner-uddannelsen og bygger på en User Centered Development (UCD)-proces med persona "Sofie" som udgangspunkt.
@@ -54,7 +53,7 @@ Alle filer og mapper er navngivet med små bogstaver og bindestreger i overensst
 - **GitHub Pages** – publicering og hosting
 
 ---
-## HTML - Semantiak struktur
+## 📄HTML - Semantiak struktur
 Siden er bygget med semantiske HTML5-elementer for at sikre klar struktur og god tilgængelighed:
 | Element | Anvendelse |
 |---------|-----------|
@@ -70,7 +69,7 @@ Siden er bygget med semantiske HTML5-elementer for at sikre klar struktur og god
 | `<ul>` / `<li>` | Navigation og footer-links |
 
 ### Ankernavigation
-Navigation er opbygget med ìd`-attributter på sektionerne, der linkes fra `<nav>`: 
+Navigation er opbygget med ìd`-attributter på sektionerne, der linkes fra `<nav>`:
 ```html
 <nav class="site-nav" id="siteNav">
   <a class="nav-logo" href="#">LUMINA</a>
@@ -85,7 +84,7 @@ Navigation er opbygget med ìd`-attributter på sektionerne, der linkes fra `<na
 ```
 
 ---
-## CSS - Styling og layout
+## 🎨CSS - Styling og layout
 ### CSS Custom Properties (variabler)
 Farver er defineret som CSS-variabler i `:root` så de er nemme at ændre ét sted og bruges konsekvent på tværs af hele siden:
 ```css
@@ -187,7 +186,7 @@ function visPlaylister(playlister) {
   });
 }
 hentPlaylister();
-
+```
 ### JavaScript-koncepter anvendt
 | Koncept | Anvendelse |
 |---------|-----------|
@@ -206,8 +205,10 @@ hentPlaylister();
 | `window.open()` | Åbner Spotify-link i ny fane |
 | `if / else` | Pile-logik til slider-wrap på mine highligh cards (højtalerens funktioner) |
 
-## JSON – Datastruktur
-Playlister hentes fra `data/playlister.json`. Hver playliste er et objekt med fire felter:
+---
+## JSON - Datastruktur
+### Hvilken type data arbejder jeg med?
+Playlister hentes fra `data/playlister.json`. Data er struktureret som et **array af objekter** — altså en liste `[]` der indeholder flere objekter `{}`, ét for hver playliste:
 ```json
 [
   {
@@ -215,20 +216,68 @@ Playlister hentes fra `data/playlister.json`. Hver playliste er et objekt med fi
     "stemning": "Dance the night away to these iconic songs",
     "emoji": "🪩",
     "link": "https://open.spotify.com/playlist/..."
-  }
+    }
 ]
 ```
+Hvert objekt har fire properties:
+| Property | Type | Indhold |
+|----------|------|---------|
+| `navn` | string | Playlistens navn — vises som overskrift på kortet |
+| `stemning` | string | En kort beskrivelse — vises som brødtekst |
+| `emoji` | string | Et emoji-ikon øverst på kortet |
+| `link` | string | URL til Spotify-playlisten — åbnes ved klik |
 
+### Hvorfor passer denne datastruktur til projektet?
+Et array af objekter er den ideelle struktur her, fordi alle playlister har de samme fire felter — og fordi JavaScript's `forEach()` kan loope igennem arrayet og bygge ét HTML-kort per objekt. Hvis jeg vil tilføje en ny playliste, tilføjer jeg bare et nyt objekt i JSON-filen uden at ændre noget JavaScript eller HTML.
+
+### Kodeeksempel — visPlaylister()
+Funktionen `visPlaylister()` modtager playliste-arrayet og bygger dynamisk et HTML-kort for hver playliste i DOM'en:
+```javascript
+function visPlaylister(playlister) {
+  // 1.Først finder funktionen den tomme `<div id="playlist-container">` i HTML — det er her kortene skal indsættes.
+  const container = document.querySelector("#playlist-container");
+
+  // 2. Derefter looper `forEach()` igennem hvert objekt i playliste-arrayet.
+  playlister.forEach((playlist) => {
+
+    // 3. For hvert objekt oprettes et nyt `<div>`-element med `createElement()` — det eksisterer kun i hukommelsen og endnu ikke på siden. 
+    const kort = document.createElement("div");
+
+    // 4. Giver det CSS-klassen "playlist-kort" så det kan styles 
+    kort.classList.add("playlist-kort");
+
+     //5. `innerHTML` med template literals (backticks) bruges til at fylde div'en med HTML, hvor `${}` trækker værdier som `playlist.navn` og `playlist.emoji` direkte ud af JSON-objektet.
+    kort.innerHTML = `
+      <span class="playlist-emoji">${playlist.emoji}</span>
+      <h3>${playlist.navn}</h3>
+      <p>${playlist.stemning}</p>
+      <button class="playlist-knap">Gå til playlist</button>
+    `;
+    // 6. Tilføjer en click-event der åbner Spotify-linket i en ny fane
+    kort.addEventListener("click", () => {
+      window.open(playlist.link, "_blank");
+    });
+    // 7. Til sidst tilføjer `appendChild()` kortet til containeren i HTML, og kortet bliver synligt på landingpagen. Dette sker for alle seks playlister i arrayet én ad gangen.
+    container.appendChild(kort);
+  });
+}
+```
+---
+## ✅ Validering
+- HTML valideret via 
+- CSS valideret via
+- CSS er placeret i ekstern fil (`css/style.css`) — struktur og præsentation er adskilt
+
+Projektet er versionsstyret med Git og hostet på GitHub.
+```bash
+git add .
+git commit -m "Beskrivende commit-besked"
+git push origin main
+```
 
 ---
-
-## Validering
-
-
----
-
-## Studerende
-**Navn:**
-**Uddannelse:**
-**Hold:**
-**Afleveringsdato:** 
+## 👤 Studerende
+**Navn:** Sigrid Skovbak 
+**Uddannelse:** Multimediedesign,m 1. semester 
+**Hold:** F26A
+**Afleveringsdato:** 1. juni 2026
