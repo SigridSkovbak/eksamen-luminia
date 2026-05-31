@@ -45,8 +45,8 @@ Alle filer og mapper er navngivet med små bogstaver og bindestreger i overensst
 
 ---
 ## 🛠️ Teknologier 
-- **HTML** - semantisk markup med korrekt brug af `<nav>`, `<header>`, `<section>`, `<article>`, `<aside>` og `<footer>`
-- **CSS** – ekstern stylesheet med CSS custom properties, Flexbox, CSS Grid, transitions og hover-effekter
+- **HTML5** - semantisk markup med korrekt brug af `<nav>`, `<header>`, `<section>`, `<article>`, `<aside>` og `<footer>`
+- **CSS3** – ekstern stylesheet med CSS custom properties, Flexbox, CSS Grid, transitions og hover-effekter
 - **JavaScript** - DOM-manipulation, event listeners, slider-logik, color switcher og fetch af JSON
 - **JSON** - ekstern datafil til playlist-sektionen
 - **GitHub** – versionsstyring med Git
@@ -106,14 +106,9 @@ Farver er defineret som CSS-variabler i `:root` så de er nemme at ændre ét st
 - `.highlight-track` — alle highlight-kort på én vandret linje (slider-effekt)
 - `.highlight-nav` — pile og dots centreret på linje
 - `.footer-inner` — brand, links og adresse fordelt med `justify-content: space-between`
-
 **CSS Grid** bruges til:
 - `.inspoPlaces` — 3 inspirationsbilleder pr. række: `grid-template-columns: repeat(3, 1fr)`
 - `#playlist-container` — 2 playlist-kort pr. række: `grid-template-columns: 1fr 1fr`
-
-
-### Vigtige CSS-valg 
-
 
 ### Designvalg
 - **Farvepalette**: Varm sandbeige (`#E8E0D0`) og brun-karamel (`#4A3F35`) — en varmere og mere sofistikeret palet end version 1, som bedre matcher LUMINA Audios nordiske og feminine brandidentitet
