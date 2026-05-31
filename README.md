@@ -1,4 +1,4 @@
-# LUMINA Audio – Landing Page
+# ✨ LUMINA Audio – Landing Page ✨
 **Multimediedesigner, 1. semester · Case: Landing Page**  
 Eksamensprojekt – forbedret version
 
@@ -9,7 +9,7 @@ Eksamensprojekt – forbedret version
 - 🎨 Figma designfil - https://www.figma.com/design/KCLmuvT71czhP7Q83Mvk3I/Eksamen--Landingpage-LUMINA?node-id=0-1&t=N9BD1L8FA4k4gOhr-1 
 - 📱 Figma prototype 
 
-## 📋 Projektbeskrivelse
+## 💡 Projektbeskrivelse
 Dette projekt er en landingpage for **LUMINA One** – en bærbar Bluetooth-højttaler fra det fiktive brand *LUMINA Audio*. Projektet er udviklet som en del af 1. semesters eksamen på Multimediedesigner-uddannelsen og bygger på en User Centered Development (UCD)-proces med persona "Sofie" som udgangspunkt.
 Landingpagen præsenterer produktet, dets farver og funktioner, og sigter mod at skabe en emotionel og visuel oplevelse der matcher målgruppens livsstil: strand, picnic, sociale sammenkomster og nordisk æstetik.
 
@@ -44,7 +44,7 @@ Landingpagen præsenterer produktet, dets farver og funktioner, og sigter mod at
 Alle filer og mapper er navngivet med små bogstaver og bindestreger i overensstemmelse med god web-praksis. CSS er placeret i en ekstern fil så struktur og præsentation er adskilt. `<script>`-tagget er placeret nederst i `<body>` så HTML er fuldt loadet før JavaScript kører.
 
 ---
-## Teknologier 
+## 🛠️ Teknologier 
 - **HTML** - semantisk markup med korrekt brug af `<nav>`, `<header>`, `<section>`, `<article>`, `<aside>` og `<footer>`
 - **CSS** – ekstern stylesheet med CSS custom properties, Flexbox, CSS Grid, transitions og hover-effekter
 - **JavaScript** - DOM-manipulation, event listeners, slider-logik, color switcher og fetch af JSON
@@ -53,7 +53,7 @@ Alle filer og mapper er navngivet med små bogstaver og bindestreger i overensst
 - **GitHub Pages** – publicering og hosting
 
 ---
-## 📄HTML - Semantiak struktur
+## 📄 HTML - Semantiak struktur
 Siden er bygget med semantiske HTML5-elementer for at sikre klar struktur og god tilgængelighed:
 | Element | Anvendelse |
 |---------|-----------|
@@ -121,7 +121,7 @@ Farver er defineret som CSS-variabler i `:root` så de er nemme at ændre ét st
 - **Knapper**: Konsekvent outline-stil med `background-color: transparent` og `border: 2px solid` — giver et luftigt og premium udtryk der matcher brandet
 
 ---
-## JavaScript - Funktionalitet
+## ⚙️ JavaScript - Funktionalitet
 Projektet har fire separate JS-funktioner. Al kode er i `js/script.js` som linkes nederst i `<body>`.
 
 ### 1. Navigationsbar — scroll-klasse
@@ -206,7 +206,7 @@ hentPlaylister();
 | `if / else` | Pile-logik til slider-wrap på mine highligh cards (højtalerens funktioner) |
 
 ---
-## JSON - Datastruktur
+## 📊 JSON - Datastruktur
 ### Hvilken type data arbejder jeg med?
 Playlister hentes fra `data/playlister.json`. Data er struktureret som et **array af objekter** — altså en liste `[]` der indeholder flere objekter `{}`, ét for hver playliste:
 ```json
