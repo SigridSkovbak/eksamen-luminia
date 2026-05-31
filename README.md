@@ -273,6 +273,6 @@ git push origin main
 ---
 ## 👤 Studerende
 **Navn:** Sigrid Skovbak 
-**Uddannelse:** Multimediedesign,m 1. semester 
+**Uddannelse:** Multimediedesign, 1. semester 
 **Hold:** F26A
 **Afleveringsdato:** 1. juni 2026
