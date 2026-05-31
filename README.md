@@ -70,6 +70,20 @@ Siden er bygget med semantiske HTML5-elementer for at sikre klar struktur og god
 | `<figure>` | Hero-fade overlay og inspirationsbilleder |
 | `<ul>` / `<li>` | Navigation og footer-links |
 
+### Ankernavigation
+Navigation er opbygget med ìd`-attributter på sektionerne, der linkes fra `<nav>`: 
+```html
+<nav class="site-nav" id="siteNav">
+  <a class="nav-logo" href="#">LUMINA</a>
+  <ul class="nav-links">
+    <li><a href="#produkt">PRODUKT</a></li>
+    <li><a href="#funktioner">FUNKTIONER</a></li>
+    <li><a href="#inspiration">INSPIRATION</a></li>
+    <li><a href="#om">OM OS</a></li>
+  </ul>
+  <a class="nav-cta" href="#produkt">KØB NU</a>
+</nav>
+```
 
 
 ---
