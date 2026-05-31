@@ -206,11 +206,25 @@ hentPlaylister();
 | `window.open()` | Åbner Spotify-link i ny fane |
 | `if / else` | Pile-logik til slider-wrap på mine highligh cards (højtalerens funktioner) |
 
+## JSON – Datastruktur
+Playlister hentes fra `data/playlister.json`. Hver playliste er et objekt med fire felter:
+```json
+[
+  {
+    "navn": "Dancing Queen",
+    "stemning": "Dance the night away to these iconic songs",
+    "emoji": "🪩",
+    "link": "https://open.spotify.com/playlist/..."
+  }
+]
+```
 
 
 ---
 
 ## Validering
+
+
 ---
 
 ## Studerende
