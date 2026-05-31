@@ -1,2 +1,8 @@
-# eksamen-luminia
-Mit eksamens projekt - 1. semester multimediedesign
+# LUMINA Audio – Landing Page
+
+**Multimediedesigner, 1. semester · Case: Landing Page**  
+Eksamensprojekt – forbedret version
+
+---
+
+

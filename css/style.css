@@ -137,13 +137,16 @@
         padding: 80px 8%; /* Laver plads omkring hele sektionen: 80px top/bund, 8% venstre/højre */
         display: flex; /* Flexbox frem for grid */
         flex-direction: row; /* Billede og colorways side om side */
+        justify-content: center;
         align-items: center; /* Vertikal centrering */
         gap: 80px; /* Afstand mellem billede og colorways */
+        max-width: 1200px;
+        margin: 0 auto;
       }
 /* --------------------------- */
 /* Hovedbillede */
       #productPicture {
-        width: 45%;
+        width: 50%;
         max-width: 550px; /* Max bredde */
         height: auto;  /* Bevarer proportioner */
         display: block;  /* Fjerner inline-block whitespace */
@@ -398,7 +401,7 @@
 /* PLAYLISTE SEKTIONEN */
 /* ---------------------------------------- */
       .playlister { /* layout af selve sektionen med overskrift og kort */
-        padding: 50px 15%;
+        padding: 60px 15%;
         text-align: center;
       }
       #playlistHeadline { /* Styling af overskrift*/
@@ -469,8 +472,16 @@
 /* OMKRING LUMINA SEKSIONEN */
 /* --------------------------- */
       #om{
-        padding: 30px 60px;
-        margin: 30px auto;
+        padding: 40px 15%;
+        text-align: center;
+      }
+      .omHeadline {
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 24px;
+        color: var(--color-text);
       }
       #om p{
         max-width: 700px;  /* Max bredde for læsbarhed */
@@ -496,6 +507,7 @@
       }
       #anmeldelser-billede{
         width: 100%;
+        margin-top: 40px;
         height: auto;       /* Bevarer proportioner */
         display: block;    /* Fjerner inline-block whitespace */
       }
