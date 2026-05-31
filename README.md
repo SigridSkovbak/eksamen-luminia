@@ -45,7 +45,6 @@ Landingpagen præsenterer produktet, dets farver og funktioner, og sigter mod at
 Alle filer og mapper er navngivet med små bogstaver og bindestreger i overensstemmelse med god web-praksis. CSS er placeret i en ekstern fil så struktur og præsentation er adskilt. `<script>`-tagget er placeret nederst i `<body>` så HTML er fuldt loadet før JavaScript kører.
 
 ---
-
 ## Teknologier 
 - **HTML** - semantisk markup med korrekt brug af `<nav>`, `<header>`, `<section>`, `<article>`, `<aside>` og `<footer>`
 - **CSS** – ekstern stylesheet med CSS custom properties, Flexbox, CSS Grid, transitions og hover-effekter
@@ -85,10 +84,22 @@ Navigation er opbygget med ìd`-attributter på sektionerne, der linkes fra `<na
 </nav>
 ```
 
-
 ---
-
 ## CSS - Styling og layout
+### CSS Custom Properties (variabler)
+Farver er defineret som CSS-variabler i `:root` så de er nemme at ændre ét sted og bruges konsekvent på tværs af hele siden:
+```css
+:root {
+  --color-bg: #E8E0D0;
+  --color-bg-alt: #DDD5C5;
+  --color-text: #4A3F35;
+  --color-accent: #7A6A5A;
+  --color-button: #6B5744;
+  --color-button-hover: #3D2E22;
+  --color-nav: #DDD5C5;
+}
+```
+
 ### Layoutteknikker
 ### Vigtige CSS-valg 
 ### Designvalg
