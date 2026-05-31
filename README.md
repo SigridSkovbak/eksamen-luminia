@@ -48,34 +48,38 @@ CSS er placeret i en ekstern fil så struktur (HTML) og præsentation (CSS) er a
 ## 🗂️ Fil- og mappestruktur
 ```
 /
-├── index.html              # Sidens HTML-struktur
+├── index.html                          # Sidens HTML-struktur
 ├── css/
-│   └── style.css           # Ekstern stylesheet (al styling)
+│   └── style.css                       # Ekstern stylesheet (al styling)
 ├── js/
-│   └── script.js           # JavaScript-funktionalitet
+│   └── script.js                       # JavaScript-funktionalitet
 ├── data/
-│   └── playlister.json     # JSON-data til playlist-sektionen
+│   └── playlister.json                 # JSON-data til playlist-sektionen
 └── img/
-    ├── colorways/
-        ├── luminagrøn.png      # Produkt – Sage Green
-        ├── luminahvid.png      # Produkt – Moonlight White
-        ├── luminalilla.png     # Produkt – Lavender Mist
-        └── luminapink.png      # Produkt – Dusty Rose
-    ├── hero-pictures/
-        ├── herolys1.png       # Hero baggrundsbillede
-        ├── heropicture.png     # Highlight-kort (vandafvisende)
-        ├── luminafrontpage.png # Inspirationsbillede
-    ├── validering/
-    │   ├── html-validering.png
-    │   └── css-validering.png
-    └── anmeldelser.png     # Trustpilot-anmeldelser
-    ├── groupsetting.png    # Inspirationsbillede
-    ├── herodark.png        # Highlight-kort (ambient lys & bluetooth)
-    ├── luminaconnect.png   # Highlight (Social Connect) & inspiration
-    ├── luminagreen.png     # Highlight (bærbar)
-    ├── luminagreen1.png    # Inspirationsbillede
-    ├── luminaparty.png     # Highlight & inspiration
-    └──  pinkluminabeach.png # Highlight & inspiration
+    ├── colorways/                      # Produktbilleder til farvevælger
+    │   ├── luminagrøn.png              # Produkt – Sage Green
+    │   ├── luminahvid.png              # Produkt – Moonlight White
+    │   ├── luminalilla.png             # Produkt – Lavender Mist
+    │   └── luminapink.png              # Produkt – Dusty Rose
+    ├── funktioner-og-settings/         # Billeder til highlights og inspo
+    │   ├── groupsetting-dark.png       # Highlight – Ambient lys
+    │   ├── groupsetting-light.png      # Highlight – Batteritid
+    │   ├── lumina-handel.png           # Inspiration
+    │   ├── luminaconnect.png           # Highlight – Social Connect & inspiration
+    │   ├── luminagreen-on-the-go.png   # Highlight – Let & bærbar
+    │   ├── luminaparty.png             # Highlight – Kraftig lyd & inspiration
+    │   ├── luminawhite-party.png       # Inspiration
+    │   ├── picnic.png                  # Inspiration
+    │   ├── pinkluminabeach.png         # Inspiration
+    │   ├── pinkluminabeachpicnic.png   # Highlight – Bluetooth & inspiration
+    │   ├── pool.png                    # Highlight – IPX5 vandafvisende
+    │   └── yoga.png                    # Inspiration
+    ├── hero-pictures/                  # Hero baggrundsbillede
+    │   └── hero-sunset.png             
+    ├── validering/                     # Skærmbilleder fra HTML og CSS validering
+    │   ├── css-validering.png
+    │   └── html-validering.png
+    └── trustpilot.png                  # Trustpilot-anmeldelser
     
 ```
 Alle filer og mapper er navngivet med små bogstaver og bindestreger i overensstemmelse med god web-praksis. CSS er placeret i en ekstern fil så struktur og præsentation er adskilt. `<script>`-tagget er placeret nederst i `<body>` så HTML er fuldt loadet før JavaScript kører.
