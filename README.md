@@ -34,7 +34,7 @@ git push origin main - Send det op til GitHub
 Første validering gav én advarsel:
     "This document appears to be written in Danish but the <html> start tag has lang="en". Consider using lang="da" instead."
 
-Advarslen blev rettet ved at ændre <html lang="en"> til <html lang="da"> i index.html, da sidens primære indhold er på dansk. lang-attributten fortæller browsere og skærmlæsere hvilket sprog siden er på — det er vigtigt for tilgængelighed.
+Advarslen blev rettet ved at ændre lang="en" til lang="da" i index.html, da sidens primære indhold er på dansk. lang-attributten fortæller browsere og skærmlæsere hvilket sprog siden er på — det er vigtigt for tilgængelighed.
 
 **Efter rettelsen: "Document checking completed. No errors or warnings to show."**
 ![HTML validering](img/validering/html-validering.png)
@@ -57,22 +57,22 @@ CSS er placeret i en ekstern fil så struktur (HTML) og præsentation (CSS) er a
 │   └── playlister.json                 # JSON-data til playlist-sektionen
 └── img/
     ├── colorways/                      # Produktbilleder til farvevælger
-    │   ├── luminagrøn.png              # Produkt – Sage Green
-    │   ├── luminahvid.png              # Produkt – Moonlight White
-    │   ├── luminalilla.png             # Produkt – Lavender Mist
-    │   └── luminapink.png              # Produkt – Dusty Rose
-    ├── funktioner-og-settings/         # Billeder til highlights og inspo
+    │   ├── luminagrøn.png              # "Sage Green"
+    │   ├── luminahvid.png              # "Moonlight White"
+    │   ├── luminalilla.png             # "Lavender Mist"
+    │   └── luminapink.png              # Dusty Rose
+    ├── funktioner-og-settings/         # Billeder til highlights og inspo sektion
     │   ├── groupsetting-dark.png       # Highlight – Ambient lys
     │   ├── groupsetting-light.png      # Highlight – Batteritid
-    │   ├── lumina-handel.png           # Inspiration
-    │   ├── luminaconnect.png           # Highlight – Social Connect & inspiration
+    │   ├── pool.png                    # Highlight – IPX5 vandafvisende
+    │   ├── luminaconnect.png           # Highlight – Social Connect
     │   ├── luminagreen-on-the-go.png   # Highlight – Let & bærbar
     │   ├── luminaparty.png             # Highlight – Kraftig lyd & inspiration
+    │   ├── pinkluminabeachpicnic.png   # Highlight – Bluetooth & inspiration
     │   ├── luminawhite-party.png       # Inspiration
     │   ├── picnic.png                  # Inspiration
     │   ├── pinkluminabeach.png         # Inspiration
-    │   ├── pinkluminabeachpicnic.png   # Highlight – Bluetooth & inspiration
-    │   ├── pool.png                    # Highlight – IPX5 vandafvisende
+    │   ├── lumina-handel.png           # Inspiration
     │   └── yoga.png                    # Inspiration
     ├── hero-pictures/                  # Hero baggrundsbillede
     │   └── hero-sunset.png             
