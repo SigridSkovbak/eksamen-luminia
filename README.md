@@ -2,18 +2,38 @@
 **Multimediedesigner, 1. semester · Case: Landing Page**  
 Eksamensprojekt – forbedret version
 
----
-## 🔗 Links 
-- 🌐 Live produkt (GitHub Pages)
-- 💾 GitHub Repository
-- 🎨 Figma designfil - https://www.figma.com/design/KCLmuvT71czhP7Q83Mvk3I/Eksamen--Landingpage-LUMINA?node-id=0-1&t=N9BD1L8FA4k4gOhr-1 
-- 📱 Figma prototype 
+## 👤 Studerende
+**Navn:** Sigrid Skovbak 
+**Uddannelse:** Multimediedesign, 1. semester 
+**Hold:** F26A
+**Afleveringsdato:** 1. juni 2026
 
+---
 ## 💡 Projektbeskrivelse
 Dette projekt er en landingpage for **LUMINA One** – en bærbar Bluetooth-højttaler fra det fiktive brand *LUMINA Audio*. Projektet er udviklet som en del af 1. semesters eksamen på Multimediedesigner-uddannelsen og bygger på en User Centered Development (UCD)-proces med persona "Sofie" som udgangspunkt.
 Landingpagen præsenterer produktet, dets farver og funktioner, og sigter mod at skabe en emotionel og visuel oplevelse der matcher målgruppens livsstil: strand, picnic, sociale sammenkomster og nordisk æstetik.
 
+---
+## 🔗 Links 
+- 🌐 Live produkt (GitHub Pages) - https://SigridSkovbak.github.io/eksamen-luminia
+- 💾 GitHub Repository - https://github.com/SigridSkovbak/eksamen-luminia.git
+- 🎨 Figma designfil - https://www.figma.com/design/KCLmuvT71czhP7Q83Mvk3I/Eksamen--Landingpage-LUMINA?node-id=0-1&t=N9BD1L8FA4k4gOhr-1 
+- 📱 Figma prototype 
 
+### Git-workflowet - Git Commit, Git Push, Git Pull
+Projektet er versionsstyret med Git og hostet på GitHub.
+```bash
+git add . - Tilføj alle ændrede filer
+git commit -m - Gem et snapshot med beskrivende commit-besked
+git push origin main - Send det op til GitHub
+```
+---
+## ✅ Validering
+- HTML valideret via 
+- CSS valideret via
+- CSS er placeret i ekstern fil (`css/style.css`) — struktur og præsentation er adskilt
+
+---
 ## 🗂️ Fil- og mappestruktur
 ```
 /
@@ -258,21 +278,3 @@ function visPlaylister(playlister) {
 }
 ```
 ---
-## ✅ Validering
-- HTML valideret via 
-- CSS valideret via
-- CSS er placeret i ekstern fil (`css/style.css`) — struktur og præsentation er adskilt
-
-Projektet er versionsstyret med Git og hostet på GitHub.
-```bash
-git add .
-git commit -m "Beskrivende commit-besked"
-git push origin main
-```
-
----
-## 👤 Studerende
-**Navn:** Sigrid Skovbak 
-**Uddannelse:** Multimediedesign, 1. semester 
-**Hold:** F26A
-**Afleveringsdato:** 1. juni 2026
