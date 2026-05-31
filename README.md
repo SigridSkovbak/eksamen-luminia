@@ -99,8 +99,20 @@ Farver er defineret som CSS-variabler i `:root` så de er nemme at ændre ét st
   --color-nav: #DDD5C5;
 }
 ```
-
 ### Layoutteknikker
+**Flexbox** bruges til:
+- `.heroContent` — tekst og knap stablet lodret med `flex-direction: column` og `gap`
+- `.productBrowse` — billede og produktinfo side om side med `flex-direction: row`
+- `.productColor` — farveknapper på en vandret linje
+- `.highlight-track` — alle highlight-kort på én vandret linje (slider-effekt)
+- `.highlight-nav` — pile og dots centreret på linje
+- `.footer-inner` — brand, links og adresse fordelt med `justify-content: space-between`
+
+**CSS Grid** bruges til:
+- `.inspoPlaces` — 3 inspirationsbilleder pr. række: `grid-template-columns: repeat(3, 1fr)`
+- `#playlist-container` — 2 playlist-kort pr. række: `grid-template-columns: 1fr 1fr`
+
+
 ### Vigtige CSS-valg 
 ### Designvalg
 ---
