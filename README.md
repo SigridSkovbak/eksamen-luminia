@@ -114,10 +114,42 @@ Farver er defineret som CSS-variabler i `:root` så de er nemme at ændre ét st
 
 
 ### Vigtige CSS-valg 
+
+
 ### Designvalg
+- **Farvepalette**: Varm sandbeige (`#E8E0D0`) og brun-karamel (`#4A3F35`) — en varmere og mere sofistikeret palet end version 1, som bedre matcher LUMINA Audios nordiske og feminine brandidentitet
+- **Typografi**: `Montserrat` via Google Fonts — moderne og let, appellerende til en ung kvindelig målgruppe
+- **Knapper**: Konsekvent outline-stil med `background-color: transparent` og `border: 2px solid` — giver et luftigt og premium udtryk der matcher brandet
+
 ---
 ## JavaScript - Funktionalitet
-### JavaScript metoder anvendt
+Projektet har fire separate JS-funktioner. Al kode er i `js/script.js` som linkes nederst i `<body>`.
+
+### 1. Navigationsbar — scroll-klasse
+### 2. Highlights-slider
+### 3. Color switcher — produktbillede
+### 4. Fetch playlister fra JSON
+
+### JavaScript-koncepter anvendt
+| Koncept | Anvendelse |
+|---------|-----------|
+| `getElementById()` | Finder nav-elementet |
+| `querySelector()` / `querySelectorAll()` | Selektion af enkelt og multiple elementer |
+| `addEventListener()` | Lytter på `scroll`, `click` |
+| `classList.add/remove/toggle` | Styrer `.scrolled` og `.active` klasser |
+| `createElement()` | Opretter dots og playlist-kort dynamisk |
+| `appendChild()` | Tilføjer elementer til DOM |
+| `forEach()` | Looper over kort, dots og farve-options |
+| `innerHTML` + template literals | Bygger HTML-strenge med `${}` variabler |
+| `window.scrollY` | Aflæser brugerens scroll-position på siden|
+| `async` / `await` | Venter på svar fra fetch |
+| `fetch()` | Henter JSON-data fra ekstern fil |
+| `.json()` | Konverterer response til JS-array |
+| `window.open()` | Åbner Spotify-link i ny fane |
+| `if / else` | Pile-logik til slider-wrap på mine highligh cards (højtalerens funktioner) |
+
+
+
 ---
 
 ## Validering
